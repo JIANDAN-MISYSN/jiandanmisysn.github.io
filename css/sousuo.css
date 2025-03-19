@@ -124,7 +124,7 @@
 #search label:hover {
 
 
-	background: rgba(0, 0, 0, 0.7);
+	background: rgb(30, 110, 45);
 
 
 	cursor: pointer
@@ -273,13 +273,13 @@
 	width: 70px;
 
 
-	background: rgba(0,0,0,0.7);
+	background: rgba(30, 110, 45);
 
 
 	border-radius: 6px;
 
 
-	box-shadow: 0 0 6px rgba(0,0,0,.16);
+	box-shadow: 0 0 6px rgba(30, 110, 45);
 
 
 	padding: 9pt 0;
@@ -523,7 +523,7 @@
 .search-type input:checked+label,.search-type input:hover+label {
 
 
-	background-color: rgba(0,0,0,1);
+	background-color: rgba(30, 110, 45);
 
 
 }

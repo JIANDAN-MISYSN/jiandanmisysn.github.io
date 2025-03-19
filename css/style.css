@@ -137,7 +137,7 @@ a {
     position: absolute;
     right: 0px;
     z-index: 2000;
-    background: rgba(1,1,1,0.7);
+    background: rgba(0, 0, 0, 0.7);
     transition: 0.3s all linear;
 }
 .list.closed {
@@ -168,7 +168,7 @@ a {
     display: block;
     color: #fff;
     font-weight: 500;
-    background: rgba(0,0,0,0.3);
+    background: rgba(6, 248, 127, 0.5);
     text-align: left;
     font-size: 12px;
 }
@@ -185,8 +185,8 @@ a {
 
 .list ul li:hover a {
     color: #fff;
-    background-color: #29f;
-    background-image: linear-gradient(135deg, rgba(35, 153, 255) 0%, rgba(84, 175, 253) 100%);
+    background-color: rgb(2, 150, 76);
+    background-image: linear-gradient(135deg, rgb(11, 39, 25) 0%, rgb(2, 150, 76) 100%);
     box-shadow: 0 3px 3px rgba(0, 40, 70, .3);
 }
 
