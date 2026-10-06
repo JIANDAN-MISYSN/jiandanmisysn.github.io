@@ -1,4 +1,4 @@
-<html lang="zh-CN">
+﻿<html lang="zh-CN">
 
 <head>
   <meta charset="UTF-8">
@@ -31,8 +31,8 @@
       left: 50%;
       bottom: 3vh;              /* 距页面底部的距离 */
       transform: translateX(-50%);
-      width: 20vw;              /* 页面横向 20% */
-      height: 10vh;             /* 页面纵向 10% */
+      width: 18vw;              /* 页面横向 20% */
+      height: 11vh;             /* 页面纵向 10% */
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -44,15 +44,15 @@
 
     /* 时分秒 */
     #bj-clock .clock-time {
-      font-size: 3vh;
+      font-size: 6vh;
       font-weight: bold;
-      line-height: 1.2;
+      line-height: 1;
       letter-spacing: 2px;
     }
 
     /* 年月日 + 星期 + 农历 */
     #bj-clock .clock-date {
-      font-size: 1.4vh;
+      font-size: 2vh;
       opacity: 0.9;
       white-space: nowrap;
       margin-top: 0.5vh;
@@ -89,8 +89,17 @@
         <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
       </div>
 
-      <li class="title"><i class="iconfont icon-huo"></i>视音</li>
+      <li class="title"><i class="iconfont icon-huo"></i>学习</li>
       <li><a rel="nofollow" class="bilibili" href="https://www.bilibili.com" target="_blank"><i class="iconfont icon-saoma2"></i>BiliBili</a></li>
+      <li><a rel="nofollow" href="https://www.runoob.com/" target="_blank"><i class="iconfont icon-saoma2"></i>菜鸟教程</a></li>
+      <li><a rel="nofollow" href="https://www.cnblogs.com/" target="_blank"><i class="iconfont icon-saoma2"></i>博客园</a></li>
+
+      <li class="title"><i class="iconfont icon-huo"></i>网盘</li>
+      <li><a rel="nofollow" href="https://pan.baidu.com" target="_blank"><i class="iconfont icon-saoma2"></i>百度云盘</a></li>
+      <li><a rel="nofollow" href="https://www.aliyundrive.com/" target="_blank"><i class="iconfont icon-saoma2"></i>阿里云盘</a></li>
+      <li><a rel="nofollow" href="https://pan.quark.cn/" target="_blank"><i class="iconfont icon-saoma2"></i>夸克网盘</a></li>
+
+      <li class="title"><i class="iconfont icon-huo"></i>视音</li>
       <li><a rel="nofollow" href="https://next.xifanacg.com/" target="_blank"><i class="iconfont icon-saoma2"></i>稀饭动漫</a></li>
       <li><a rel="nofollow" href="https://www.dalvdm.cc/" target="_blank"><i class="iconfont icon-saoma2"></i>Dalv</a></li>
       <li><a rel="nofollow" href="https://www.挂了.com/" target="_blank"><i class="iconfont icon-saoma2"></i>BTNull</a></li>
@@ -99,23 +108,9 @@
       <li><a rel="nofollow" href="https://subhd.tv/" target="_blank"><i class="iconfont icon-saoma2"></i>SubHD字幕</a></li>
       <li><a rel="nofollow" href="https://zimuku.org/" target="_blank"><i class="iconfont icon-saoma2"></i>字幕库</a></li>
 
-      <li class="title"><i class="iconfont icon-huo"></i>网盘</li>
-      <li><a rel="nofollow" href="https://pan.baidu.com" target="_blank"><i class="iconfont icon-saoma2"></i>百度云盘</a></li>
-      <li><a rel="nofollow" href="https://www.aliyundrive.com/" target="_blank"><i class="iconfont icon-saoma2"></i>阿里云盘</a></li>
-      <li><a rel="nofollow" href="https://pan.quark.cn/" target="_blank"><i class="iconfont icon-saoma2"></i>夸克网盘</a></li>
-
-      <li class="title"><i class="iconfont icon-huo"></i>学习</li>
-      <li><a rel="nofollow" href="https://www.runoob.com/" target="_blank"><i class="iconfont icon-saoma2"></i>菜鸟教程</a></li>
-      <li><a rel="nofollow" href="https://www.cnblogs.com/" target="_blank"><i class="iconfont icon-saoma2"></i>博客园</a></li>
-
       <li class="title"><i class="iconfont icon-huo"></i>资源与聚源导航</li>
       <li><a rel="nofollow" href="https://so.lzpanx.com/" target="_blank"><i class="iconfont icon-saoma2"></i>聚合搜索</a></li>
       <li><a rel="nofollow" href="https://clicli.com.cn/" target="_blank"><i class="iconfont icon-saoma2"></i>呲哩呲哩</a></li>
-      <li><a rel="nofollow" href="https://tools.liumingye.cn/" target="_blank"><i class="iconfont icon-saoma2"></i>刘明野工具</a></li>
-      <li><a rel="nofollow" href="https://www.ghxi.com/" target="_blank"><i class="iconfont icon-saoma2"></i>果核软件</a></li>
-      <li><a rel="nofollow" href="https://www.423down.com/" target="_blank"><i class="iconfont icon-saoma2"></i>423Down</a></li>
-      <li><a rel="nofollow" href="http://www.dayanzai.me/" target="_blank"><i class="iconfont icon-saoma2"></i>大眼仔旭</a></li>
-      <li><a rel="nofollow" href="https://www.yxssp.com/" target="_blank"><i class="iconfont icon-saoma2"></i>异星软件空间</a></li>
 
       <li class="title"><i class="iconfont icon-huo"></i>工具</li>
       <li><a rel="nofollow" href="https://map.baidu.com" target="_blank"><i class="iconfont icon-saoma2"></i>百度地图</a></li>
@@ -126,8 +121,11 @@
       <li><a rel="nofollow" href="https://greasyfork.org" target="_blank"><i class="iconfont icon-saoma2"></i>Greasyfork</a></li>
       <li><a rel="nofollow" href="https://www.github.com/" target="_blank"><i class="iconfont icon-saoma2"></i>GitHub</a></li>
       <li><a rel="nofollow" href="https://www.netlify.com/" target="_blank"><i class="iconfont icon-saoma2"></i>Netlify</a></li>
-
-
+      <li><a rel="nofollow" href="https://www.ghxi.com/" target="_blank"><i class="iconfont icon-saoma2"></i>果核软件</a></li>
+      <li><a rel="nofollow" href="https://www.423down.com/" target="_blank"><i class="iconfont icon-saoma2"></i>423Down</a></li>
+      <li><a rel="nofollow" href="http://www.dayanzai.me/" target="_blank"><i class="iconfont icon-saoma2"></i>大眼仔旭</a></li>
+      <li><a rel="nofollow" href="https://www.yxssp.com/" target="_blank"><i class="iconfont icon-saoma2"></i>异星软件空间</a></li>
+      <li><a rel="nofollow" href="https://tools.liumingye.cn/" target="_blank"><i class="iconfont icon-saoma2"></i>刘明野工具</a></li>
 
       <li class="title"><i class="iconfont icon-huo"></i>AI</li>
       <li><a rel="nofollow" href="https://chat.deepseek.com/" target="_blank"><i class="iconfont icon-saoma2"></i>Deepseek</a></li>
