@@ -1,0 +1,196 @@
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-touch-fullscreen" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="full-screen" content="yes"><!-- UC强制全屏 -->
+  <meta name="browsermode" content="application"><!-- UC应用模式 -->
+  <meta name="x5-fullscreen" content="true"><!-- QQ强制全屏 -->
+  <meta name="x5-page-mode" content="app"><!-- QQ应用模式 -->
+  <title>个人使用的微聚源导航</title>
+  <meta name="keywords" content="哈，就真的一个导航">
+  <meta name="description" content="单纯的个人使用的导航">
+  <link rel="shortcut icon" href="images/logo.ico" type="image/x-icon">
+  <link href="css/style.css" rel="stylesheet">
+  <link href="css/sousuo.css" rel="stylesheet">
+  <style>
+    /* ===== 个别链接的专属悬停颜色（自行修改下方颜色值即可） ===== */
+    /* BiliBili：鼠标悬停时变为B站粉 #FB7299 */
+    .list ul li:hover a.bilibili {
+      background: #FB7299;
+    }
+
+    /* ===== 北京时间部件（可自行修改下方尺寸、位置、颜色） ===== */
+    #bj-clock {
+      position: absolute;
+      left: 50%;
+      bottom: 3vh;              /* 距页面底部的距离 */
+      transform: translateX(-50%);
+      width: 20vw;              /* 页面横向 20% */
+      height: 10vh;             /* 页面纵向 10% */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: rgba(0, 0, 0, 0.7);
+      border-radius: 8px;
+      z-index: 99;
+    }
+
+    /* 时分秒 */
+    #bj-clock .clock-time {
+      font-size: 3vh;
+      font-weight: bold;
+      line-height: 1.2;
+      letter-spacing: 2px;
+    }
+
+    /* 年月日 + 星期 + 农历 */
+    #bj-clock .clock-date {
+      font-size: 1.4vh;
+      opacity: 0.9;
+      white-space: nowrap;
+      margin-top: 0.5vh;
+    }
+
+    /* 窄屏时日期文字允许换行、时间字号缩小，避免溢出部件 */
+    @media (max-width: 640px) {
+      #bj-clock .clock-time {
+        font-size: 2vh;
+        letter-spacing: 1px;
+      }
+
+      #bj-clock .clock-date {
+        white-space: normal;
+        text-align: center;
+        padding: 0 4px;
+      }
+    }
+  </style>
+  <script src="js/menu.js" defer></script>
+  <script src="js/clock.js" defer></script>
+  <script src="js/sousuo.js" defer></script>
+</head>
+
+<body>
+  <!-- 右上角菜单按钮 -->
+  <div id="menu"><i></i></div>
+
+  <!-- 右侧网址导航列表 -->
+  <div class="list closed">
+    <ul>
+      <div class="shici"><br>今日诗词:<br>
+        <span id="jinrishici-sentence">正在加载今日诗词....</span>
+        <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
+      </div>
+
+      <li class="title"><i class="iconfont icon-huo"></i>学习</li>
+      <li><a rel="nofollow" class="bilibili" href="https://www.bilibili.com" target="_blank"><i class="iconfont icon-saoma2"></i>BiliBili</a></li>
+      <li><a rel="nofollow" href="https://www.runoob.com/" target="_blank"><i class="iconfont icon-saoma2"></i>菜鸟教程</a></li>
+      <li><a rel="nofollow" href="https://www.cnblogs.com/" target="_blank"><i class="iconfont icon-saoma2"></i>博客园</a></li>
+
+      <li class="title"><i class="iconfont icon-huo"></i>网盘</li>
+      <li><a rel="nofollow" href="https://pan.baidu.com" target="_blank"><i class="iconfont icon-saoma2"></i>百度云盘</a></li>
+      <li><a rel="nofollow" href="https://www.aliyundrive.com/" target="_blank"><i class="iconfont icon-saoma2"></i>阿里云盘</a></li>
+      <li><a rel="nofollow" href="https://pan.quark.cn/" target="_blank"><i class="iconfont icon-saoma2"></i>夸克网盘</a></li>
+
+      <li class="title"><i class="iconfont icon-huo"></i>视音</li>
+      <li><a rel="nofollow" href="https://next.xifanacg.com/" target="_blank"><i class="iconfont icon-saoma2"></i>稀饭动漫</a></li>
+      <li><a rel="nofollow" href="https://www.dalvdm.cc/" target="_blank"><i class="iconfont icon-saoma2"></i>Dalv</a></li>
+      <li><a rel="nofollow" href="https://www.挂了.com/" target="_blank"><i class="iconfont icon-saoma2"></i>BTNull</a></li>
+      <li><a rel="nofollow" href="https://assrt.net/" target="_blank"><i class="iconfont icon-saoma2"></i>伪射手</a></li>
+      <li><a rel="nofollow" href="https://bbs.acgrip.com/" target="_blank"><i class="iconfont icon-saoma2"></i>Anime字幕</a></li>
+      <li><a rel="nofollow" href="https://subhd.tv/" target="_blank"><i class="iconfont icon-saoma2"></i>SubHD字幕</a></li>
+      <li><a rel="nofollow" href="https://zimuku.org/" target="_blank"><i class="iconfont icon-saoma2"></i>字幕库</a></li>
+
+      <li class="title"><i class="iconfont icon-huo"></i>资源与聚源导航</li>
+      <li><a rel="nofollow" href="https://so.lzpanx.com/" target="_blank"><i class="iconfont icon-saoma2"></i>聚合搜索</a></li>
+      <li><a rel="nofollow" href="https://clicli.com.cn/" target="_blank"><i class="iconfont icon-saoma2"></i>呲哩呲哩</a></li>
+
+      <li class="title"><i class="iconfont icon-huo"></i>工具</li>
+      <li><a rel="nofollow" href="https://map.baidu.com" target="_blank"><i class="iconfont icon-saoma2"></i>百度地图</a></li>
+      <li><a rel="nofollow" href="https://www.amap.com" target="_blank"><i class="iconfont icon-saoma2"></i>高德地图</a></li>
+      <li><a rel="nofollow" href="https://map.tianditu.gov.cn/" target="_blank"><i class="iconfont icon-saoma2"></i>天地图</a></li>
+      <li><a rel="nofollow" href="https://map.google.com" target="_blank"><i class="iconfont icon-saoma2"></i>谷歌地图</a></li>
+      <li><a rel="nofollow" href="https://www.mapbox.com/" target="_blank"><i class="iconfont icon-saoma2"></i>MapBox</a></li>
+      <li><a rel="nofollow" href="https://greasyfork.org" target="_blank"><i class="iconfont icon-saoma2"></i>Greasyfork</a></li>
+      <li><a rel="nofollow" href="https://www.github.com/" target="_blank"><i class="iconfont icon-saoma2"></i>GitHub</a></li>
+      <li><a rel="nofollow" href="https://www.netlify.com/" target="_blank"><i class="iconfont icon-saoma2"></i>Netlify</a></li>
+      <li><a rel="nofollow" href="https://www.ghxi.com/" target="_blank"><i class="iconfont icon-saoma2"></i>果核软件</a></li>
+      <li><a rel="nofollow" href="https://www.423down.com/" target="_blank"><i class="iconfont icon-saoma2"></i>423Down</a></li>
+      <li><a rel="nofollow" href="http://www.dayanzai.me/" target="_blank"><i class="iconfont icon-saoma2"></i>大眼仔旭</a></li>
+      <li><a rel="nofollow" href="https://www.yxssp.com/" target="_blank"><i class="iconfont icon-saoma2"></i>异星软件空间</a></li>
+      <li><a rel="nofollow" href="https://tools.liumingye.cn/" target="_blank"><i class="iconfont icon-saoma2"></i>刘明野工具</a></li>
+
+      <li class="title"><i class="iconfont icon-huo"></i>AI</li>
+      <li><a rel="nofollow" href="https://chat.deepseek.com/" target="_blank"><i class="iconfont icon-saoma2"></i>Deepseek</a></li>
+      <li><a rel="nofollow" href="https://chat.openai.com" target="_blank"><i class="iconfont icon-saoma2"></i>OpenAI</a></li>
+      <li><a rel="nofollow" href="https://www.qianwen.com/" target="_blank"><i class="iconfont icon-saoma2"></i>通义千问</a></li>
+      <li><a rel="nofollow" href="https://kimi.moonshot.cn/" target="_blank"><i class="iconfont icon-saoma2"></i>kimi</a></li>
+      <li><a rel="nofollow" href="https://chatglm.cn/main/detail" target="_blank"><i class="iconfont icon-saoma2"></i>智谱清言</a></li>
+      <li><a rel="nofollow" href="https://grokai.org/" target="_blank"><i class="iconfont icon-saoma2"></i>Grok</a></li>
+      <li><a rel="nofollow" href="https://claude.com/" target="_blank"><i class="iconfont icon-saoma2"></i>Claude</a></li>
+
+      <li class="title"><i class="iconfont icon-huo"></i>翻译</li>
+      <li><a rel="nofollow" href="https://fanyi.baidu.com/" target="_blank"><i class="iconfont icon-saoma2"></i>百度翻译</a></li>
+      <li><a rel="nofollow" href="https://www.deepl.com" target="_blank"><i class="iconfont icon-saoma2"></i>DEEPL</a></li>
+      <li><a rel="nofollow" href="https://www.iciba.com/" target="_blank"><i class="iconfont icon-saoma2"></i>金山词霸</a></li>
+
+      <li class="title"><i class="iconfont icon-huo"></i>资源</li>
+      <li><a rel="nofollow" href="https://msdn.itellyou.cn/" target="_blank"><i class="iconfont icon-saoma2"></i>MSDN</a></li>
+      <li><a rel="nofollow" href="https://www.imsdn.cn/" target="_blank"><i class="iconfont icon-saoma2"></i>我的MSDN·</a></li>
+      <li><a rel="nofollow" href="https://axutongxue.ysupan.com/" target="_blank"><i class="iconfont icon-saoma2"></i>阿虚同学</a></li>
+      <li><a rel="nofollow" href="https://www.gkzenti.cn" target="_blank"><i class="iconfont icon-saoma2"></i>真题库</a></li>
+    </ul>
+  </div>
+
+  <!-- 搜索区 -->
+  <div id="search">
+    <div id="search-list">
+      <div class="s-type">
+        <div class="s-type-list">
+          <label for="type-baidu">搜索</label>
+        </div>
+      </div>
+      <div class="search-group">
+        <span class="type-text">搜索</span>
+        <ul class="search-type">
+          <li><input hidden type="radio" name="type" id="type-baidu"
+              value="https://www.baidu.com/s?wd=" data-placeholder="百度"><label
+              for="type-baidu"><span>百度</span></label></li>
+          <li><input hidden type="radio" name="type" id="type-google"
+              value="https://www.google.com/search?q=" data-placeholder="谷歌"><label
+              for="type-google"><span>谷歌</span></label></li>
+          <li><input hidden type="radio" name="type" id="type-Bing"
+              value="https://cn.bing.com/search?q=" data-placeholder="Bing"><label
+              for="type-Bing"><span>必应</span></label></li>
+          <li><input hidden type="radio" name="type" id="type-bilibili"
+              value="https://search.bilibili.com/all?keyword=" data-placeholder="bilibili视频"><label
+              for="type-bilibili"><span>B站</span></label></li>
+        </ul>
+      </div>
+    </div>
+    <form action="https://www.baidu.com/s?wd=" method="get" target="_blank" id="super-search-fm">
+      <input type="text" id="search-text" autocomplete="off">
+      <button type="submit"><i></i></button>
+    </form>
+    <div class="set-check">
+      <input type="checkbox" id="set-search-blank" autocomplete="off">
+    </div>
+  </div>
+
+  <!-- 北京时间部件 -->
+  <div id="bj-clock">
+    <div class="clock-time" id="clock-time">--:--:--</div>
+    <div class="clock-date" id="clock-date"></div>
+  </div>
+
+  <div class="bgo"></div>
+</body>
+
+</html>
